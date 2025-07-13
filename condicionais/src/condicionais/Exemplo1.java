@@ -1,33 +1,28 @@
 package condicionais;
 
+import java.util.Locale;
 import java.util.Scanner;
+
+//Uma operadora de telefonia cobra R$50.00 por um plano básico que
+//dá direito a 100 minutos de telefone. Cada minuto que exceder a
+//franquia de 100 minutos custa R$2.00.Fazer um programa para ler a
+//quantidade de minutos que uma pessoa consumiu, daí mostrar o valor
+//a ser pago.
 
 public class Exemplo1 {
 
 	public static void main(String[] args) {
-
+		
+		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 		
-		int diferenca, adicional = 0;
-		int valor = 50;
-		
-		System.out.println("Digite a quantidade de minutos:"); //interação do usuário
 		int minutos = sc.nextInt();
 		
-		if (minutos < 0) System.out.println("Valor inválido!");
+		double plano = 50.0;
+		if (minutos > 100) plano += (minutos - 100) * 2.0;
 		
-		if (minutos < 100) System.out.println("Mínimo 100 minutos");
+		System.out.printf("Valor da conta: R$ %.2f%n", plano);
 		
-		if (minutos == 100) System.out.println("Valor a pagar: R$ " + valor);
-		
-		if (minutos > 100) {
-
-			diferenca = minutos - 100; //subtração da qntde de mins com o minimo de 100 mins
-			adicional = diferenca * 2; //a diferenca vale a multiplicacao com 2
-			valor = valor + adicional;
-			
-			System.out.println("Valor a pagar: R$ " + valor);
-		}
 		sc.close();
 	}
 
