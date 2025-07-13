@@ -16,12 +16,23 @@ public class Exemplo1 {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 		
+		System.out.println("Digite a quantidade de minutos:");
 		int minutos = sc.nextInt();
 		
 		double plano = 50.0;
-		if (minutos > 100) plano += (minutos - 100) * 2.0;
 		
-		System.out.printf("Valor da conta: R$ %.2f%n", plano);
+		if (minutos < 0) System.out.println("Valor inválido!");
+		
+		if (minutos < 100) System.out.printf("Mínimo 100 minutos");
+		
+		if (minutos == 100) System.out.printf("Valor a pagar: R$ %.2f%n", plano);
+		
+		if (minutos > 100)
+		{	
+			plano += (minutos - 100) * 2.0;
+			
+			System.out.printf("Valor da conta: R$ %.2f", plano);	
+		}
 		
 		sc.close();
 	}
