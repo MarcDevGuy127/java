@@ -6,17 +6,22 @@ public class Exercicio2 {
 
 	public static void main(String[] args) {
 		// Lista de exercícios 2
-		// Fazer um programa para ler um número inteiro e 
-		// dizer se este número é par ou ímpar.  
+		// Leia 2 valores inteiros (A e B). Após, o programa deve mostrar uma 
+		// mensagem "Sao Multiplos" ou "Nao sao Multiplos", indicando se os 
+		// valores lidos são  múltiplos entre si. Atenção: os números devem 
+		// poder ser digitados em ordem crescente ou decrescente.
 		
 		Scanner sc = new Scanner(System.in);
 		
 		System.out.println("Digite um número inteiro:");
-		int num = sc.nextInt();
+		int a = sc.nextInt();
 		
-		if (num % 2 == 0) System.out.println("Par");
+		System.out.println("Digite um outro número inteiro:");
+		int b = sc.nextInt();
 		
-		if (num % 2 != 0)  System.out.println("Ímpar");
+		if (a % b == 0) System.out.println("São múltiplos.");
+		
+		if (a % b != 0) System.out.println("Não são múltiplos.");
 	}
 
 }
