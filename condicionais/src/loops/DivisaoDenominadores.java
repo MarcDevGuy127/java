@@ -24,7 +24,7 @@ public class DivisaoDenominadores {
 				System.out.println("divisao impossivel");
 
 			} else {
-				double div = (double) x / y;
+				double div = (double) x / y; // esse casting foi usado para não dar exceção
 				System.out.printf("%.1f%n", div);
 			}
 		}
