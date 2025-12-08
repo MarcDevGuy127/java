@@ -4,6 +4,14 @@ public class FuncoesString {
 
 	public static void main(String[] args) {
 
+		/*
+ 		- Formatar: toLowerCase(), toUpperCase(), trim()
+ 		- Recortar: substring(inicio), substring(inicio, fim)
+ 		- Substituir: Replace(char, char), Replace(string, string)
+ 		- Buscar: IndexOf, LastIndexOf
+ 		- str.Split(" ")
+		 */
+		
 		String original = "abcde FGHIJ ABC abc DEFG   ";
 		String s01 = original.toLowerCase();
 		String s02 = original.toUpperCase();
