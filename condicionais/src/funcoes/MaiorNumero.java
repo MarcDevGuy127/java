@@ -15,6 +15,7 @@ public class MaiorNumero {
 		sc.close();
 	}
 
+	// funcao para comparar o valor mais alto
 	public static int max(int x, int y, int z) {
 		int aux;
 		if (x > y && x > z) {
@@ -27,6 +28,7 @@ public class MaiorNumero {
 		return aux;
 	}
 
+	// funcao para exibir resultado
 	public static void showResult(int value) {
 		System.out.println("Higher = " + value);
 	}
