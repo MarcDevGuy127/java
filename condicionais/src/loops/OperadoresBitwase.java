@@ -9,9 +9,9 @@ public class OperadoresBitwase {
 		// comparacoes com tabela verdade
 		int n1 = 89;
 		int n2 = 60;
-		System.out.println(n1 & n2);
-		System.out.println(n1 | n2);
-		System.out.println(n1 ^ n2);
+		System.out.println(n1 & n2); // E - Apenas V se ambos os lados for V
+		System.out.println(n1 | n2); // OU - Apenas V se pelo menos um lado ou ambos for V
+		System.out.println(n1 ^ n2); // OU EXCLUSIVO - Apenas V se um lado for V
 
 		// comparando bits
 		Scanner sc = new Scanner(System.in);
